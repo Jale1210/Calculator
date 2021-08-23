@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+		<style>
+			.short { width: 30px; text-align: center; }
+		</style>
+    </head>
+    <body>
+		<input id="x1" type="text" class="short" />
+		<select id="op">
+			<option> + </option>
+			<option> - </option>
+			<option> * </option>
+			<option> / </option>
+		</select>
+		<input id="x2" type="text" class="short" />
+		<button onclick="calc()"> = </button>
+		<span id="result"></span>
+        
+        <script>
+			const x1 = document.getElementById("x1");
+			const x2 = document.getElementById("x2");
+			const op = document.getElementById("op");
+			const result = document.getElementById("result");
+
+			function calc() {
+				result.innerHTML = eval(x1.value + op.value + x2.value);
+			}
+        </script>
+    </body>
+</html>
+
+
+
+
